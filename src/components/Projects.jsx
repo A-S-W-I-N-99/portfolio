@@ -1,15 +1,18 @@
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
-
+import portfolioImage from "../assets/portfolio.png";
 function Projects() {
   const projects = [
-    {
-      title: "Portfolio Website",
-      tech: "React • Tailwind CSS • Framer Motion",
-      description:
-        "Personal portfolio with animations, AI assistant, command palette, and modern UI.",
-    },
-  ];
+ {
+  title: "Personal Portfolio Website",
+  tech: "React • Tailwind CSS • Framer Motion • Vercel",
+  description:
+    "A modern personal portfolio featuring glassmorphism design, AI assistant, GitHub integration, command palette, particle background, and responsive UI.",
+  image: portfolioImage,
+  link: "https://portfolio-flax-six-94.vercel.app",
+  github: "https://github.com/A-S-W-I-N-99/portfolio",
+}
+];
 
   return (
     <section
@@ -39,9 +42,11 @@ function Projects() {
                 }}
                 className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-6 h-full"
               >
-                <div className="h-48 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 mb-6 flex items-center justify-center">
-                  <span className="text-5xl">🚀</span>
-                </div>
+                <img
+  src={project.image}
+  alt={project.title}
+  className="w-full h-48 object-cover rounded-2xl mb-6"
+/>
 
                 <h3 className="text-2xl font-bold mb-3">
                   {project.title}
@@ -55,9 +60,25 @@ function Projects() {
                   {project.description}
                 </p>
 
-                <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-xl transition">
-                  View Project
-                </button>
+             <div className="flex gap-3">
+  <a
+    href={project.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-xl transition"
+  >
+    Live Demo
+  </a>
+
+  <a
+    href={project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-4 py-2 border border-white/20 hover:bg-white/10 rounded-xl transition"
+  >
+    GitHub
+  </a>
+</div>
               </motion.div>
             </Tilt>
           ))}
