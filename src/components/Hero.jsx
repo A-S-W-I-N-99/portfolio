@@ -84,13 +84,12 @@ function Hero() {
           className="flex flex-col md:flex-row gap-4 justify-center"
         >
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl font-semibold"
-          >
-            View Projects
-          </motion.button>
+       <a
+  href="#projects"
+  className="px-6 py-3 bg-blue-600 rounded-xl hover:bg-blue-700 transition"
+>
+  View Projects
+</a>
 
           <a
             href={resume}

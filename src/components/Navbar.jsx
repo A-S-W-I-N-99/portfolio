@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
-
+import { FaBars, FaTimes } from "react-icons/fa";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
+  
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/10 border-b border-white/20">
@@ -26,20 +25,7 @@ function Navbar() {
           <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <button
-  onClick={() => {
-    setDarkMode(!darkMode);
 
-    if (darkMode) {
-      document.documentElement.classList.remove("dark");
-    } else {
-      document.documentElement.classList.add("dark");
-    }
-  }}
-  className="text-xl mr-4"
->
-  {darkMode ? <FaSun /> : <FaMoon />}
-</button>
 
         {/* Mobile Button */}
         <button
