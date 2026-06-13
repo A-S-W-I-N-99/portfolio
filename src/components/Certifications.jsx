@@ -3,10 +3,41 @@ import certificatePdf from "../assets/cisco-certificate.pdf";
 
 const certifications = [
   {
-    title: "Exploring IoT with Cisco Packet Tracer",
-    issuer: "Cisco Networking Academy",
-    year: "2025",
+    title: "AI for Beginners",
+    issuer: "HP LIFE",
+    year:"2026",
+    certificate: "/certificates/ai-beginners.pdf",
   },
+  {
+    title: "Programming In Java",
+    issuer: "NPTEL",
+     year:"2025",
+    certificate: "/certificates/nptel-java.pdf",
+  },
+{
+  title: "AI Workshop",
+  issuer: "Dell",
+  year: "2025",
+  certificate: "/certificates/dell-ai-workshop.pdf",
+},
+  {
+    title: "Learn Java Programming from Basics to Experts",
+    issuer: "Udemy",
+     year:"2025",
+    certificate: "/certificates/udemy-java.pdf",
+  },
+  {
+    title: "Cybersecurity for Beginners",
+    issuer: "TATA STRIVE",
+     year:"2025",
+    certificate: "/certificates/tata-cybersecurity.pdf",
+  },
+ {
+ title: "Exploring IoT with Cisco Packet Tracer",
+ issuer: "Cisco Networking Academy",
+ year: "2026",
+ certificate: certificatePdf,
+},
 ];
 
 function Certifications() {
@@ -34,11 +65,12 @@ function Certifications() {
                 y: -10,
                 scale: 1.03,
               }}
-              className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-6"
+              className="relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-6 overflow-hidden"
             >
               <h3 className="text-xl font-bold mb-3">
                 {cert.title}
               </h3>
+              
 
               <p className="text-gray-400">
                 {cert.issuer}
@@ -47,11 +79,11 @@ function Certifications() {
               <p className="text-blue-400 mt-4">
                 {cert.year}
               </p>
-              <a
-                href={certificatePdf}
-                target="_blank"
-                rel="noreferrer"
-                 className="inline-block mt-4 px-4 py-2 bg-blue-600 rounded-xl hover:bg-blue-700"
+       <a
+  href={cert.certificate}
+  target="_blank"
+  rel="noreferrer"
+  className="inline-block mt-4 px-4 py-2 bg-blue-600 rounded-xl hover:bg-blue-700"
 >
   View Certificate
 </a>
